@@ -67,7 +67,7 @@ export const createCheckoutSession = async (req, res) => {
     // Get the return URL
     const returnUrl = process.env.CLIENT_URL 
       ? `${process.env.CLIENT_URL}/verify-payment/${tx_ref}`
-      : `http://localhost:5173/verify-payment/${tx_ref}`;
+      : `https://e-fornt.onrender.com/verify-payment/${tx_ref}`;
 
     // Initialize Chapa payment
     const paymentData = {

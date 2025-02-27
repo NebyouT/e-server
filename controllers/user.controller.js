@@ -198,7 +198,7 @@ export const requestPasswordReset = async (req, res) => {
         }
 
         const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: "1h" });
-        const resetLink = `http://localhost:5173/reset-password/${token}`; // Frontend URL
+        const resetLink = `https://e-fornt.onrender.com/reset-password/${token}`; // Frontend URL
 
         // In development, return the link even if email sending fails
         if (process.env.NODE_ENV !== 'production') {
